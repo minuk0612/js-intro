@@ -6,14 +6,20 @@
 <style>
     body{
         text-align: center;
+        background-color: rgb(169, 231, 231);
     }
 button{
     width: 130px;
     height:40px;
     border-radius: 30%;
     box-shadow: 10px 10px 10px  wheat;
+    background-color: aquamarine;
+    font-size: large;
 }
-
+h1,h3{
+    font-family:cursive;
+    
+}
 
 </style>
 
@@ -22,7 +28,7 @@ button{
 
 <script>
 function myfunc() {
-  var person = prompt("Please enter your name", "Human");
+  var person = prompt("Please enter your name", "Hooman");
   document.getElementById("demo1").innerHTML = "Hello "+ person + "!! How was your day??"
 }
 
@@ -41,7 +47,7 @@ function myFunction() {
 </head>
 <body>
 <h1>Click here to say Hi!!</h1>
-<button onclick="myfunc()">click</button>
+<button onclick="myfunc()">Click</button>
 <h3 id="demo1"></h3>
 
 
