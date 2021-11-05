@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+</title>
+<style>
+    body{
+        text-align: center;
+    }
+button{
+    width: 130px;
+    height:40px;
+    border-radius: 30%;
+    box-shadow: 10px 10px 10px  wheat;
+}
+
+
+</style>
+
+
+
+
+<script>
+function myfunc() {
+  var person = prompt("Please enter your name", "Human");
+  document.getElementById("demo1").innerHTML = "Hello "+ person + "!! How was your day??"
+}
+
+var count=0;
+function myFunction() {
+ 
+   count++;
+    document.getElementById("demo2").innerHTML = count + " click!";
+   
+}
+
+
+</script>
+
+
+</head>
+<body>
+<h1>Click here to say Hi!!</h1>
+<button onclick="myfunc()">click</button>
+<h3 id="demo1"></h3>
+
+
+<h1>Click here to increment the counter!!</h1>
+<button onclick="myFunction()">Counter</button>
+<h3 id="demo2"></h3>
+
+</body>
+
+</html>
