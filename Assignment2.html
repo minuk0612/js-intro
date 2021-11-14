@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show hide pass</title>
+<style>
+#parentdiv{
+    background-color: rgb(74, 78, 78);
+    width: 30vw;
+    height:20vh;
+position: absolute;
+top:50px;
+left:400px;
+text-align: center;
+border: 10px solid black;
+}
+#parentdiv2{
+    background-color: rgb(28, 133, 133);
+    width: 50vw;
+    height:30vh;
+    position: absolute;
+top:300px;
+left:400px;
+text-align: center;
+border: 5px solid black;
+}
+button{
+    width:auto;
+border: 3px solid black;
+border-radius: 20%;
+box-shadow: 8px 8px 8px black;
+}
+
+}
+</style>
+
+    </head>
+<body>
+    
+<div id="parentdiv">
+<h1>
+    Show/Hide password
+</h1>
+<label>Enter password:</label>
+<input type='password' id="pass"/>
+<button onclick="fun()" id="butt">Show password</button>
+</div>
+
+<div id="parentdiv2">
+<h1 id="greet">Greetings!!</h1><h1>MINU</h1>
+
+<button onclick="fun1()" >Good morning!!</button>
+<button onclick="fun2()">Good Noon!!</button>
+<button onclick="fun3()">Good Night!!</button>
+
+
+</div>
+
+
+
+
+
+
+</body>
+
+<script>
+function fun(){
+    var buttref=document.getElementById("butt");
+if(buttref.innerText=="Show password"){
+var passref=document.getElementById("pass");
+passref.type="text";
+var buttref1=document.getElementById("butt");
+buttref1.innerText="Hide password";
+}
+else{
+
+    var passref=document.getElementById("pass");
+passref.type="password";
+var buttref1=document.getElementById("butt");
+buttref1.innerText="Show password";
+
+
+}
+}
+
+function fun1(){
+   var greetref= document.getElementById("greet");
+   greetref.innerText="Good Morning!!"
+}
+function fun2(){
+   var greetref= document.getElementById("greet");
+   greetref.innerText="Good Noon!!"
+}
+function fun3(){
+   var greetref= document.getElementById("greet");
+   greetref.innerText="Good Night!!"
+}
+
+
+
+</script>
+
+    </html>
