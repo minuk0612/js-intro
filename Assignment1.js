@@ -1,35 +1,49 @@
 //question 1
 
 
-let obj = {
-    h:10,
-    r:3,
-    volume : function() {
-        return Math.PI*this.r*this.r*this.h;
-    },
-    surfaceArea : function() {
-        return 2*Math.PI*this.r*this.h;
+
+     function volume() {
+        //  var r=number(document.getElementById("volume"));
+        //  var h=number(document.getElementById("radius"));
+var r=(radius.value);
+var h=(height.value);
+
+
+        vol1.innerText="Volume ="+(Math.PI*r*r*h);
     }
-};
- console.log("volume = " + obj.volume());
- console.log("Area ="+ obj.surfaceArea());
+    function surfaceArea() {
+        var r=(radius.value);
+        var h=(height.value);
+       area.innerText="Surface Area ="+ (2*Math.PI*r*h);
+    };
+//  console.log("volume = " + obj.volume());
+//  console.log("Area ="+ obj.surfaceArea());
 
 
 
 
  //question 2
 
- var power=function(v,e){
-     return v*e;
- };
- console.log(power(3,4));
+ var power=function(){
+var volt=vv.value;
+var cur=cc.value;
+
+pow.innerText="Power = "+ (volt*cur);
+
+};
 
 
  //question3
 
-var noOfWallsPainted=function(area,h,w){
-    return Number(area/(h*w));
+ function noOfWallsPainted(){
+var areaa=a.value;
+var hei= he.value;
+var wid=width.value;
+if(hei<=0||wid<=0){
+    alert("Height and width Must be greater than 0");
+    return 0;
 }
 
-console.log(noOfWallsPainted(24,3,4));
+noOfWalls.innerText="no. of walls painted = "+Math.floor(areaa/(hei*wid));
+};
 
