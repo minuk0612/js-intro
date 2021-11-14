@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+body{
+    text-align: center;
+    background-color: rgb(220, 231, 227);
+
+}
+
+
+.parentdiv{
+height: 50vh;
+width:50vw;
+background-color: rgb(220, 231, 227);
+position:absolute;
+display:flex;
+top:100px;
+left:460px;
+
+
+}
+#title{
+    font-family:Brush Script MT, Brush Script Std, cursive;
+    color: rgb(160, 142, 38);
+    height: 10vh;
+    width:40vw;
+    font-size: xxx-large;
+    /* margin: 0%; */
+}
+.grid1{
+    display: grid;
+    grid-template-columns: auto ;
+}
+.div1{
+    background-color: whitesmoke;
+    height: 8vh;
+    width:40vw;
+    margin-top: 20px;
+    text-align: right;
+   padding-left: 5px;
+   font-size: large;
+   box-shadow: 5px 5px 5px rgb(153, 153, 147);
+   border-radius: 3% ;
+}
+#text1{
+   color: black;
+   font-family: sans-serif;
+   float: left;
+padding-left: 10px;
+}
+
+button{
+   padding: 0%;
+    float: right;
+    margin: 20px;
+   height: 15px;
+   width: 15px;
+   color: goldenrod;
+   border:2px solid goldenrod
+}
+#myDropdown{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+        </style>
+    </head>
+
+<body>
+
+<div class="parentdiv">
+    
+
+<div class="grid1">
+<div><p id="title">General Questions</p></div>
+<div class="div1">
+    <p id="text1">Do you accept all major Credit Cards?</p>
+ <button onclick="myFunction()">+</button>
+
+
+ <div id="myDropdown">
+    <a href="">Home</a>
+    <a href="">About</a>
+    <a href="">Contact</a>
+  </div>
+
+
+
+</div>
+<div class="div1"> <p id="text1">Do you support local farmers?</p>
+<button onclick="myFunction()" class="dropbtn">+</button>
+</div>
+<div class="div1" > <p id="text1">Do you use organic ingrediants?</p>
+    <button onclick="myFunction()" class="dropbtn">+</button></div>
+
+</div>
+
+</div>
+
+
+
+
+
+</body>
+
+<script>
+function myFunction() {
+  var ptr=document.getElementById("myDropdown");
+ptr.display=block;
+
+};
+</script>
+</html>
