@@ -10,14 +10,10 @@ body{
 
 
 .parentdiv{
-height: 50vh;
-width:50vw;
-background-color: rgb(220, 231, 227);
-position:absolute;
-display:flex;
+
 top:100px;
 left:460px;
-
+position: absolute;
 
 }
 #title{
@@ -43,6 +39,18 @@ left:460px;
    box-shadow: 5px 5px 5px rgb(153, 153, 147);
    border-radius: 3% ;
 }
+/* div2{
+    display: none;
+    background-color: whitesmoke;
+    height: 8vh;
+    width:40vw;
+    margin-top: 20px;
+    text-align: right;
+   padding-left: 5px;
+   font-size: large;
+   box-shadow: 5px 5px 5px rgb(153, 153, 147);
+   border-radius: 3% ;
+} */
 #text1{
    color: black;
    font-family: sans-serif;
@@ -59,7 +67,32 @@ button{
    color: goldenrod;
    border:2px solid goldenrod
 }
-#myDropdown{
+
+
+.dropdown-content {
+  display: none;
+  /* position: absolute;
+  background-color: white;
+  min-width: 140px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+
+  background-color: whitesmoke;
+    height: 25vh;
+    width:40vw;
+    text-align: left;
+   padding-left: 5px;
+   font-size: large;
+   box-shadow: 5px 5px 5px rgb(153, 153, 147);
+border: 1px solid black;
+}
+.show {
+  display: block;
+}
+
+
+
+/* #myDropdown{
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -67,7 +100,7 @@ button{
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-}
+} */
 
         </style>
     </head>
@@ -82,23 +115,36 @@ button{
 <div class="div1">
     <p id="text1">Do you accept all major Credit Cards?</p>
  <button onclick="myFunction()">+</button>
-
-
- <div id="myDropdown">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad necessitatibus, dolor, ipsum, assumenda reprehenderit modi dolorum debitis quos inventore rerum dolorem? Enim distinctio et consectetur nisi tenetur officia fugiat velit.</p>
+</div>
+<div id="myDropdown1" class="dropdown-content">
+ <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
+ <hr>
+ <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
+ <hr>
+ <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
   </div>
-
-
-
-</div>
 <div class="div1"> <p id="text1">Do you support local farmers?</p>
-<button onclick="myFunction()" class="dropbtn">+</button>
+<button onclick="myFunction1()" >+</button>
 </div>
+<div id="myDropdown2" class="dropdown-content">
+    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
+    <hr>
+    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
+    <hr>
+    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
+     </div>
+
+
 <div class="div1" > <p id="text1">Do you use organic ingrediants?</p>
-    <button onclick="myFunction()" class="dropbtn">+</button></div>
-
+    <button onclick="myFunction2()" >+</button></div>
 </div>
-
+<div id="myDropdown3" class="dropdown-content">
+    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
+    <hr>
+    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
+    <hr>
+    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit</a> </p>
+     </div>
 </div>
 
 
@@ -108,10 +154,20 @@ button{
 </body>
 
 <script>
-function myFunction() {
-  var ptr=document.getElementById("myDropdown");
-ptr.display=block;
+function myFunction(){
+    // var ref=document.getElementById("myDropdown1");
+    // ref.style.display="block";
 
-};
+    document.getElementById("myDropdown1").classList.toggle("show");
+
+
+}
+function myFunction1(){
+document.getElementById("myDropdown2").classList.toggle("show");
+}
+function myFunction2(){
+document.getElementById("myDropdown3").classList.toggle("show");
+}
+
 </script>
 </html>
