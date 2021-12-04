@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Print odd and even</title>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+.but1{
+    margin:30px 180px auto
+}
+    </style>
+    
+    </head>
+<body>
+
+<div class="but1">
+    <button type="button" class="btn btn-primary" onclick="fun1()">Primary</button>
+<h1 id="disp"></h1>
+</div>
+
+<script>
+function fun1(){
+    var result="";
+    var ref=document.getElementById("disp");
+    for(var i=1;i<10;i++){
+        if(i%2==0)
+            result = result + '<FONT COLOR="green">' + i + '</font><br>';
+    
+else 
+    result = result + '<FONT COLOR="red">' + i + '</font><br>';
+ref.innerHTML=result;
+    }
+}
+</script>
+
+</body>
+    </html>
