@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+div{
+    width: 65vw;
+    height:72vh;
+    margin: 100px auto;
+
+
+}
+table,td,tr{
+    padding: 20px;
+    text-align: center;
+    border-right: 3px solid black;
+    border: 2px solid black;
+    background-color: antiquewhite;
+}
+th{
+    background-color: bisque;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+
+
+}
+</style>
+<body>
+    <div>
+   <table>
+       <tr>
+           <th>id</th>
+           <th>name</th>
+           <th>year</th>
+            <th>color</th>
+            <th>pantone_value</th>
+        </tr>
+
+   </table> 
+</div>
+</body>
+<script>
+
+
+  let res=  fetch("https://reqres.in/api/user")
+   let s=res.then(function (response){
+       return response.json();
+   });
+   s.then(function(a){
+       console.log(a)
+       console.log(a.data)
+       a.data.forEach (function(element){
+           console.log(element);
+        let tab=document.querySelector('table');
+        let tr=document.createElement('tr');
+        let td = document.createElement('td');
+        tab.appendChild(tr);
+        td.innerHTML=element.id;
+        tr.appendChild(td);
+
+        let td1 = document.createElement('td');
+        td1.innerHTML=element.name;
+        tr.appendChild(td1);
+        let td2 = document.createElement('td');
+        td2.innerHTML=element.year;
+        tr.appendChild(td2);
+        let td3 = document.createElement('td');
+        td3.innerHTML=element.color;
+        td3.style.backgroundColor=element.color
+
+        tr.appendChild(td3);
+        let td4 = document.createElement('td');
+        td4.innerHTML=element.pantone_value;
+        tr.appendChild(td4);
+       })
+   })
+   
+</script>
+</html>
