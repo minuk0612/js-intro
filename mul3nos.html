@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.main{
+    width:40vw;
+    height: 10vh;
+    background-color: beige;
+    margin: 100px auto;
+    padding: 50px;
+}
+</style>
+<body>
+    <div class="main">
+        <input type="number" placeholder="Enter 1st number" id="first"/>
+        <input type="number" placeholder="Enter 2nd number" id="second"/>
+        <input type="number" placeholder="Enter 3rd number" id="third"/>
+        <button onclick="fun()">calculate</button>
+<h1>Multiplication of these numbers are:
+<span id="res"></span></h1>
+    </div>
+</body>
+<script>
+function fun() {
+    var a=(document.querySelector("#first").value)
+    var b=(document.querySelector("#second").value)
+    var c=(document.querySelector("#third").value)
+
+   function fun1(s) {
+        return function (t){
+            return function(u){
+                return(s*t*u);
+            };
+        };
+    };
+
+
+    document.getElementById("res").innerHTML=" "+(fun1(a)(b)(c));
+// x.innerHTML=fun1(a)(b)(c);
+    console.log(fun1(a)(b)(c));
+}
+</script>
+</html>
